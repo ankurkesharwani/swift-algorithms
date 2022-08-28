@@ -15,7 +15,6 @@ final class TopSortRecursiveTests: XCTestCase {
 
         let ts = TopSortRecursive()          
         let result = ts.sort(edges, 6)
-        print(result)
         XCTAssert(result == [0, 3, 1, 4, 5, 2])
     }
 }

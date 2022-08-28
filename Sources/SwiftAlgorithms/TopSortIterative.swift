@@ -89,7 +89,7 @@ class TopSortIterative {
 }
 
 // MARK: Use
-
+/*
 let edges = [
     [0, 1],
     [0, 3],
@@ -102,4 +102,4 @@ let edges = [
 
 let ts = TopSortIterative()          
 let result = ts.sort(edges, 6)
-print(result)
+print(result)*/

@@ -64,7 +64,7 @@ class TopSortRecursive {
 }
 
 // MARK: Use
-
+/*
 let edges = [
     [0, 1],
     [0, 3],
@@ -77,4 +77,4 @@ let edges = [
 
 let ts = TopSortRecursive()          
 let result = ts.sort(edges, 6)
-print(result)
+print(result)*/

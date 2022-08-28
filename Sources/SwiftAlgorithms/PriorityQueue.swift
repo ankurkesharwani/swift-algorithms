@@ -3,7 +3,11 @@ import Foundation
 class PriorityQueue<K> {
     private var compare: (K, K) -> Int
     private var arr: [K]
-        
+
+    var isEmpty: Bool {
+        return arr.isEmpty
+    }
+
     init(compare: @escaping (K, K) -> Int) {
         self.compare = compare
         arr = [K]()
@@ -21,7 +25,7 @@ class PriorityQueue<K> {
         if arr.isEmpty { return nil }
         let min = arr[0]; let last = arr.removeLast()
         if arr.isEmpty { return min }
-        if last != nil { arr[0] = last }
+        arr[0] = last
         
         heapifyDown()
         
@@ -103,26 +107,3 @@ class PriorityQueue<K> {
         arr[j] = temp
     }
 }
-
-// MARK: Use
-
-let q = PriorityQueue<Int>(compare: { i, j in i - j })
-q.insert(3)
-q.insert(4)
-q.insert(2)
-q.insert(5)
-q.insert(1)
-q.insert(6)
-q.insert(8)
-q.insert(0)
-q.insert(7)
-
-print(q.pop())
-print(q.pop())
-print(q.pop())
-print(q.pop())
-print(q.pop())
-print(q.pop())
-print(q.pop())
-print(q.pop())
-print(q.pop())

@@ -1,5 +1,6 @@
 
-class TopSort {
+class TopSortIterative {
+    
     /// Gives topologiocal ordering of all nodes in a graph
     /// - Parameters:
     ///     - edges: An arry of edges where each edge is a represented as an array os size 2, ex: [V1, V2]. V1 and V2 are two vertices that form an edge
@@ -86,7 +87,9 @@ class TopSort {
         }              
     }
 }
-             
+
+// MARK: Use
+
 let edges = [
     [0, 1],
     [0, 3],
@@ -97,6 +100,6 @@ let edges = [
     [4, 5]
 ]
 
-let ts = TopSort()          
+let ts = TopSortIterative()          
 let result = ts.sort(edges, 6)
 print(result)
